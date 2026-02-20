@@ -87,6 +87,7 @@ export function getServicesByCategory(establishmentId: string, categoryId: strin
 // ==================== PROFISSIONAIS (Mock) ====================
 
 const mockProfessionals: Professional[] = [
+  // --- BARBEARIA (barb-001) ---
   {
     id: 'prof-001',
     establishmentId: 'barb-001',
@@ -94,17 +95,17 @@ const mockProfessionals: Professional[] = [
     avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
     bio: 'Especialista em cortes clássicos e barba tradicional. 10 anos de experiência.',
     specialties: ['Cortes Clássicos', 'Barba', 'Degradê'],
-    services: ['barb-svc-001', 'barb-svc-004', 'barb-svc-005', 'barb-svc-006'],
+    services: ['barb-svc-001', 'barb-svc-002', 'barb-svc-003'],
     schedule: {
       worksOnWeekends: true,
       worksOnHolidays: false,
       customHours: [
-        { dayOfWeek: 1, isAvailable: true, startTime: '09:00', endTime: '18:00' },
-        { dayOfWeek: 2, isAvailable: true, startTime: '09:00', endTime: '18:00' },
-        { dayOfWeek: 3, isAvailable: true, startTime: '09:00', endTime: '18:00' },
-        { dayOfWeek: 4, isAvailable: true, startTime: '09:00', endTime: '18:00' },
-        { dayOfWeek: 5, isAvailable: true, startTime: '09:00', endTime: '19:00' },
-        { dayOfWeek: 6, isAvailable: true, startTime: '09:00', endTime: '17:00' },
+        { dayOfWeek: 1, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 2, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 3, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 4, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 5, isAvailable: true, startTime: '09:00', endTime: '20:00' },
+        { dayOfWeek: 6, isAvailable: true, startTime: '09:00', endTime: '18:00' },
       ],
       timeOff: [],
     },
@@ -114,14 +115,45 @@ const mockProfessionals: Professional[] = [
     totalBookings: 567,
     joinedAt: '2020-01-15T10:00:00Z',
   },
+
+  // --- SALÃO DE CABELO (cabelo-001) ---
   {
-    id: 'prof-002',
-    establishmentId: 'barb-001',
-    name: 'André Santos',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80',
-    bio: 'Especialista em cortes modernos e degradê. Atualizado nas últimas tendências.',
-    specialties: ['Degradê', 'Navalhado', 'Cortes Modernos'],
-    services: ['barb-svc-002', 'barb-svc-003', 'barb-svc-007'],
+    id: 'prof-003',
+    establishmentId: 'cabelo-001',
+    name: 'Ana Luiza',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80',
+    bio: 'Hair stylist especializada em colorimetria e cortes modernos.',
+    specialties: ['Coloração', 'Mechas', 'Corte Feminino'],
+    services: ['cab-svc-001', 'cab-svc-002', 'cab-svc-003'],
+    schedule: {
+      worksOnWeekends: true,
+      worksOnHolidays: false,
+      customHours: [
+        { dayOfWeek: 1, isAvailable: true, startTime: '09:00', endTime: '20:00' },
+        { dayOfWeek: 2, isAvailable: true, startTime: '09:00', endTime: '20:00' },
+        { dayOfWeek: 3, isAvailable: true, startTime: '09:00', endTime: '20:00' },
+        { dayOfWeek: 4, isAvailable: true, startTime: '09:00', endTime: '20:00' },
+        { dayOfWeek: 5, isAvailable: true, startTime: '09:00', endTime: '21:00' },
+        { dayOfWeek: 6, isAvailable: true, startTime: '09:00', endTime: '18:00' },
+      ],
+      timeOff: [],
+    },
+    isActive: true,
+    rating: 4.8,
+    reviewCount: 120,
+    totalBookings: 890,
+    joinedAt: '2021-05-20T10:00:00Z',
+  },
+
+  // --- SALÃO DE UNHAS (unhas-001) ---
+  {
+    id: 'prof-004',
+    establishmentId: 'unhas-001',
+    name: 'Julia Santos',
+    avatarUrl: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80',
+    bio: 'Nail designer especialista em alongamentos e artes.',
+    specialties: ['Alongamento em Gel', 'Nail Art', 'Manicure Clássica'],
+    services: ['unhas-svc-001', 'unhas-svc-002', 'unhas-svc-003'],
     schedule: {
       worksOnWeekends: true,
       worksOnHolidays: false,
@@ -136,11 +168,98 @@ const mockProfessionals: Professional[] = [
       timeOff: [],
     },
     isActive: true,
-    rating: 4.8,
-    reviewCount: 67,
-    totalBookings: 432,
-    joinedAt: '2021-03-10T14:00:00Z',
+    rating: 4.9,
+    reviewCount: 85,
+    totalBookings: 600,
+    joinedAt: '2022-02-10T10:00:00Z',
   },
+
+  // --- DENTISTA (denta-001) ---
+  {
+    id: 'prof-005',
+    establishmentId: 'denta-001',
+    name: 'Dr. Roberto Almeida',
+    avatarUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80',
+    bio: 'Odontologista clínico e especialista em estética dental.',
+    specialties: ['Clareamento', 'Limpeza', 'Restauração'],
+    services: ['denta-svc-001', 'denta-svc-002', 'denta-svc-003'],
+    schedule: {
+      worksOnWeekends: false,
+      worksOnHolidays: false,
+      customHours: [
+        { dayOfWeek: 1, isAvailable: true, startTime: '08:00', endTime: '18:00' },
+        { dayOfWeek: 2, isAvailable: true, startTime: '08:00', endTime: '18:00' },
+        { dayOfWeek: 3, isAvailable: true, startTime: '08:00', endTime: '18:00' },
+        { dayOfWeek: 4, isAvailable: true, startTime: '08:00', endTime: '18:00' },
+        { dayOfWeek: 5, isAvailable: true, startTime: '08:00', endTime: '17:00' },
+      ],
+      timeOff: [],
+    },
+    isActive: true,
+    rating: 5.0,
+    reviewCount: 200,
+    totalBookings: 1500,
+    joinedAt: '2019-08-01T08:00:00Z',
+  },
+
+  // --- CLÍNICA DE ESTÉTICA (estetica-001) ---
+  {
+    id: 'prof-006',
+    establishmentId: 'estetica-001',
+    name: 'Amanda Costa',
+    avatarUrl: 'https://images.unsplash.com/photo-1594824406561-12500851f502?w=200&q=80',
+    bio: 'Esteticista especializada em tratamentos faciais de alta tecnologia.',
+    specialties: ['Limpeza de Pele', 'Peeling', 'Microagulhamento'],
+    services: ['est-svc-001', 'est-svc-002', 'est-svc-003'],
+    schedule: {
+      worksOnWeekends: true,
+      worksOnHolidays: false,
+      customHours: [
+        { dayOfWeek: 1, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 2, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 3, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 4, isAvailable: true, startTime: '09:00', endTime: '19:00' },
+        { dayOfWeek: 5, isAvailable: true, startTime: '09:00', endTime: '20:00' },
+        { dayOfWeek: 6, isAvailable: true, startTime: '10:00', endTime: '16:00' },
+      ],
+      timeOff: [],
+    },
+    isActive: true,
+    rating: 4.7,
+    reviewCount: 95,
+    totalBookings: 850,
+    joinedAt: '2022-01-20T10:00:00Z',
+  },
+
+  // --- SPA (spa-001) ---
+  {
+    id: 'prof-007',
+    establishmentId: 'spa-001',
+    name: 'Sofia Mendes',
+    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80',
+    bio: 'Massoterapeuta focada no bem-estar físico e mental.',
+    specialties: ['Massagem Relaxante', 'Pedras Quentes', 'Reflexologia'],
+    services: ['spa-svc-001', 'spa-svc-002', 'spa-svc-003'],
+    schedule: {
+      worksOnWeekends: true,
+      worksOnHolidays: false,
+      customHours: [
+        { dayOfWeek: 0, isAvailable: true, startTime: '10:00', endTime: '18:00' },
+        { dayOfWeek: 1, isAvailable: true, startTime: '10:00', endTime: '20:00' },
+        { dayOfWeek: 2, isAvailable: true, startTime: '10:00', endTime: '20:00' },
+        { dayOfWeek: 3, isAvailable: true, startTime: '10:00', endTime: '20:00' },
+        { dayOfWeek: 4, isAvailable: true, startTime: '10:00', endTime: '20:00' },
+        { dayOfWeek: 5, isAvailable: true, startTime: '10:00', endTime: '21:00' },
+        { dayOfWeek: 6, isAvailable: true, startTime: '10:00', endTime: '21:00' },
+      ],
+      timeOff: [],
+    },
+    isActive: true,
+    rating: 4.9,
+    reviewCount: 150,
+    totalBookings: 1200,
+    joinedAt: '2021-08-15T09:00:00Z',
+  }
 ]
 
 // Busca profissionais por estabelecimento

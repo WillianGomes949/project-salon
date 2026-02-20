@@ -38,8 +38,12 @@ export async function GET(request: NextRequest) {
       date,
       durationMinutes
     )
+    const availableTimesOnly = timeSlots
+      .filter(s => s.available)
+      .map(s => s.time)
 
     return NextResponse.json({
+      availableTimes: availableTimesOnly,
       data: {
         date,
         establishmentId,

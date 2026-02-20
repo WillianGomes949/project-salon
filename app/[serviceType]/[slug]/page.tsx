@@ -451,12 +451,13 @@ export default function EstablishmentPage() {
               </Card>
             )}
             {/* O Modal que faltava */}
-            <BookingModal 
+            <BookingModal
               isOpen={showBookingModal}
               onClose={() => setShowBookingModal(false)}
               establishmentId={establishment.id}
               services={services}
-              preSelectedServiceId={selectedService} // Passa o serviço que o usuário já clicou (se houver)
+              professionals={professionals} // <-- Adicione esta linha
+              preSelectedServiceId={selectedService}
             />
           </div>
         </div>
