@@ -1,0 +1,63 @@
+import { Establishment } from '@/types/establishment'
+
+export const spas: Establishment[] = [
+  {
+    id: 'spa-001',
+    slug: 'zen-spa-relax',
+    name: 'Zen Spa Relax',
+    type: 'spa',
+    primaryColor: '#4CAF50',
+    secondaryColor: '#C8E6C9',
+    description: 'Um oásis de tranquilidade no meio da cidade. Massagens terapêuticas, tratamentos de spa e momentos de relaxamento total.',
+    shortDescription: 'Renove sua energia',
+    phone: '(11) 3555-7777',
+    whatsapp: '(11) 95555-7777',
+    email: 'contato@zenspa.com',
+    website: 'https://zenspa.com',
+    address: {
+      street: 'Rua do Relaxamento',
+      number: '555',
+      neighborhood: 'Vila Mariana',
+      city: 'São Paulo',
+      state: 'SP',
+      zipCode: '04012-000',
+      country: 'Brasil',
+    },
+    socialMedia: {
+      instagram: '@zensparelax',
+      facebook: 'zensparelax',
+    },
+    bookingSettings: {
+      advanceBookingDays: 14,
+      minHoursBeforeBooking: 4,
+      slotDuration: 90,
+      allowSameDayBooking: true,
+      autoConfirm: true,
+      cancellationPolicy: 'Cancelamento gratuito até 4 horas antes.',
+      businessHours: [
+        { dayOfWeek: 0, isOpen: true, openTime: '10:00', closeTime: '18:00' },
+        { dayOfWeek: 1, isOpen: true, openTime: '10:00', closeTime: '20:00' },
+        { dayOfWeek: 2, isOpen: true, openTime: '10:00', closeTime: '20:00' },
+        { dayOfWeek: 3, isOpen: true, openTime: '10:00', closeTime: '20:00' },
+        { dayOfWeek: 4, isOpen: true, openTime: '10:00', closeTime: '20:00' },
+        { dayOfWeek: 5, isOpen: true, openTime: '10:00', closeTime: '21:00' },
+        { dayOfWeek: 6, isOpen: true, openTime: '10:00', closeTime: '21:00' },
+      ],
+    },
+    images: {
+      hero: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80',
+        'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&q=80',
+        'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80',
+      ],
+    },
+    isActive: true,
+    isVerified: true,
+    createdAt: '2021-08-15T09:00:00Z',
+    updatedAt: '2024-01-28T10:00:00Z',
+    rating: 4.9,
+    reviewCount: 245,
+    totalBookings: 1890,
+  },
+]

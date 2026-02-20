@@ -1,0 +1,63 @@
+import { Establishment } from '@/types/establishment'
+
+export const clinicasEstetica: Establishment[] = [
+  {
+    id: 'estetica-001',
+    slug: 'estetica-laser',
+    name: 'Estética Laser',
+    type: 'clinica-estetica',
+    primaryColor: '#9C27B0',
+    secondaryColor: '#E1BEE7',
+    description: 'Clínica de estética avançada com tecnologia de última geração. Tratamentos faciais, corporais e depilação a laser.',
+    shortDescription: 'Beleza e bem-estar em um só lugar',
+    phone: '(11) 3666-9999',
+    whatsapp: '(11) 96666-9999',
+    email: 'contato@esteticalaser.com',
+    address: {
+      street: 'Rua da Estética',
+      number: '321',
+      complement: 'Edifício Beleza, Sala 201',
+      neighborhood: 'Itaim Bibi',
+      city: 'São Paulo',
+      state: 'SP',
+      zipCode: '04532-000',
+      country: 'Brasil',
+    },
+    socialMedia: {
+      instagram: '@esteticalaser',
+      facebook: 'esteticalaseroficial',
+    },
+    bookingSettings: {
+      advanceBookingDays: 30,
+      minHoursBeforeBooking: 24,
+      slotDuration: 60,
+      allowSameDayBooking: false,
+      autoConfirm: true,
+      cancellationPolicy: 'Cancelamento gratuito até 24 horas antes.',
+      businessHours: [
+        { dayOfWeek: 0, isOpen: false, openTime: '', closeTime: '' },
+        { dayOfWeek: 1, isOpen: true, openTime: '09:00', closeTime: '19:00' },
+        { dayOfWeek: 2, isOpen: true, openTime: '09:00', closeTime: '19:00' },
+        { dayOfWeek: 3, isOpen: true, openTime: '09:00', closeTime: '19:00' },
+        { dayOfWeek: 4, isOpen: true, openTime: '09:00', closeTime: '19:00' },
+        { dayOfWeek: 5, isOpen: true, openTime: '09:00', closeTime: '20:00' },
+        { dayOfWeek: 6, isOpen: true, openTime: '10:00', closeTime: '16:00' },
+      ],
+    },
+    images: {
+      hero: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&q=80',
+        'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80',
+        'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80',
+      ],
+    },
+    isActive: true,
+    isVerified: true,
+    createdAt: '2022-01-20T10:00:00Z',
+    updatedAt: '2024-01-25T11:00:00Z',
+    rating: 4.6,
+    reviewCount: 178,
+    totalBookings: 1567,
+  },
+]

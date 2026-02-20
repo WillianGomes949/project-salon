@@ -1,0 +1,62 @@
+import { Establishment } from '@/types/establishment'
+
+export const saloesCabelo: Establishment[] = [
+  {
+    id: 'cabelo-001',
+    slug: 'studio-beleza',
+    name: 'Studio Beleza',
+    type: 'salao-cabelo',
+    primaryColor: '#E91E63',
+    secondaryColor: '#F48FB1',
+    description: 'Especialistas em transformação capilar. Cortes modernos, coloração profissional e tratamentos de alta performance.',
+    shortDescription: 'Seu cabelo, sua identidade',
+    phone: '(11) 3234-5678',
+    whatsapp: '(11) 99876-5432',
+    email: 'contato@studiobeleza.com',
+    address: {
+      street: 'Rua da Beleza',
+      number: '456',
+      neighborhood: 'Jardins',
+      city: 'São Paulo',
+      state: 'SP',
+      zipCode: '01415-000',
+      country: 'Brasil',
+    },
+    socialMedia: {
+      instagram: '@studiobeleza',
+      facebook: 'studiobelezaoficial',
+    },
+    bookingSettings: {
+      advanceBookingDays: 45,
+      minHoursBeforeBooking: 24,
+      slotDuration: 60,
+      allowSameDayBooking: false,
+      autoConfirm: true,
+      cancellationPolicy: 'Cancelamento gratuito até 24 horas antes.',
+      businessHours: [
+        { dayOfWeek: 0, isOpen: false, openTime: '', closeTime: '' },
+        { dayOfWeek: 1, isOpen: true, openTime: '09:00', closeTime: '20:00' },
+        { dayOfWeek: 2, isOpen: true, openTime: '09:00', closeTime: '20:00' },
+        { dayOfWeek: 3, isOpen: true, openTime: '09:00', closeTime: '20:00' },
+        { dayOfWeek: 4, isOpen: true, openTime: '09:00', closeTime: '20:00' },
+        { dayOfWeek: 5, isOpen: true, openTime: '09:00', closeTime: '21:00' },
+        { dayOfWeek: 6, isOpen: true, openTime: '09:00', closeTime: '18:00' },
+      ],
+    },
+    images: {
+      hero: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80',
+        'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=800&q=80',
+        'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80',
+      ],
+    },
+    isActive: true,
+    isVerified: true,
+    createdAt: '2022-06-10T09:00:00Z',
+    updatedAt: '2024-01-20T16:00:00Z',
+    rating: 4.7,
+    reviewCount: 234,
+    totalBookings: 2890,
+  },
+]

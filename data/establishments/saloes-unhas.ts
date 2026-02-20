@@ -1,0 +1,62 @@
+import { Establishment } from '@/types/establishment'
+
+export const saloesUnhas: Establishment[] = [
+  {
+    id: 'unhas-001',
+    slug: 'nail-art-studio',
+    name: 'Nail Art Studio',
+    type: 'salao-unhas',
+    primaryColor: '#FF69B4',
+    secondaryColor: '#FFB6C1',
+    description: 'Especialistas em nail art e cuidados com as unhas. Técnicas inovadoras, produtos de qualidade e designs exclusivos.',
+    shortDescription: 'Arte nas suas mãos',
+    phone: '(11) 3344-5566',
+    whatsapp: '(11) 98877-6655',
+    email: 'contato@nailartstudio.com',
+    address: {
+      street: 'Rua das Unhas',
+      number: '789',
+      neighborhood: 'Moema',
+      city: 'São Paulo',
+      state: 'SP',
+      zipCode: '04576-000',
+      country: 'Brasil',
+    },
+    socialMedia: {
+      instagram: '@nailartstudio',
+      tiktok: '@nailartstudio',
+    },
+    bookingSettings: {
+      advanceBookingDays: 21,
+      minHoursBeforeBooking: 4,
+      slotDuration: 45,
+      allowSameDayBooking: true,
+      autoConfirm: true,
+      cancellationPolicy: 'Cancelamento gratuito até 4 horas antes.',
+      businessHours: [
+        { dayOfWeek: 0, isOpen: false, openTime: '', closeTime: '' },
+        { dayOfWeek: 1, isOpen: true, openTime: '10:00', closeTime: '19:00' },
+        { dayOfWeek: 2, isOpen: true, openTime: '10:00', closeTime: '19:00' },
+        { dayOfWeek: 3, isOpen: true, openTime: '10:00', closeTime: '19:00' },
+        { dayOfWeek: 4, isOpen: true, openTime: '10:00', closeTime: '19:00' },
+        { dayOfWeek: 5, isOpen: true, openTime: '10:00', closeTime: '20:00' },
+        { dayOfWeek: 6, isOpen: true, openTime: '10:00', closeTime: '18:00' },
+      ],
+    },
+    images: {
+      hero: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1920&q=80',
+      gallery: [
+        'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800&q=80',
+        'https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=800&q=80',
+        'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80',
+      ],
+    },
+    isActive: true,
+    isVerified: true,
+    createdAt: '2022-09-15T11:00:00Z',
+    updatedAt: '2024-01-18T14:30:00Z',
+    rating: 4.9,
+    reviewCount: 156,
+    totalBookings: 1234,
+  },
+]

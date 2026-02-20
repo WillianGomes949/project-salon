@@ -1,0 +1,107 @@
+import { Service, ServiceCategory } from '@/types/service'
+
+export const salaoCabeloCategories: ServiceCategory[] = [
+  { id: 'cortes', name: 'Cortes', description: 'Cortes femininos e masculinos', icon: 'scissors', order: 1 },
+  { id: 'coloracao', name: 'Coloração', description: 'Tinturas e mechas', icon: 'palette', order: 2 },
+  { id: 'tratamentos', name: 'Tratamentos', description: 'Hidratação e reconstrução', icon: 'sparkles', order: 3 },
+  { id: 'escovas', name: 'Escovas', description: 'Escova modelada e chapinha', icon: 'wind', order: 4 },
+]
+
+export const salaoCabeloServices: Service[] = [
+  // Cortes
+  {
+    id: 'cabelo-svc-001',
+    name: 'Corte Feminino',
+    description: 'Corte com lavagem e finalização',
+    price: 80.00,
+    durationMinutes: 60,
+    category: { id: 'cortes', name: 'Cortes', order: 1 },
+    imageUrl: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80',
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  {
+    id: 'cabelo-svc-002',
+    name: 'Corte Masculino',
+    description: 'Corte masculino com lavagem',
+    price: 50.00,
+    durationMinutes: 40,
+    category: { id: 'cortes', name: 'Cortes', order: 1 },
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  // Coloração
+  {
+    id: 'cabelo-svc-003',
+    name: 'Coloração Completa',
+    description: 'Tintura em todo o cabelo',
+    price: 150.00,
+    durationMinutes: 120,
+    category: { id: 'coloracao', name: 'Coloração', order: 2 },
+    imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80',
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  {
+    id: 'cabelo-svc-004',
+    name: 'Mechas',
+    description: 'Mechas tradicionais ou balayage',
+    price: 200.00,
+    durationMinutes: 150,
+    category: { id: 'coloracao', name: 'Coloração', order: 2 },
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  {
+    id: 'cabelo-svc-005',
+    name: 'Retoque de Raiz',
+    description: 'Retoque de coloração na raiz',
+    price: 90.00,
+    durationMinutes: 90,
+    category: { id: 'coloracao', name: 'Coloração', order: 2 },
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  // Tratamentos
+  {
+    id: 'cabelo-svc-006',
+    name: 'Hidratação',
+    description: 'Hidratação profunda',
+    price: 60.00,
+    durationMinutes: 45,
+    category: { id: 'tratamentos', name: 'Tratamentos', order: 3 },
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  {
+    id: 'cabelo-svc-007',
+    name: 'Reconstrução',
+    description: 'Reconstrução capilar intensiva',
+    price: 90.00,
+    durationMinutes: 60,
+    category: { id: 'tratamentos', name: 'Tratamentos', order: 3 },
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  // Escovas
+  {
+    id: 'cabelo-svc-008',
+    name: 'Escova Modelada',
+    description: 'Escova com modelagem',
+    price: 55.00,
+    durationMinutes: 45,
+    category: { id: 'escovas', name: 'Escovas', order: 4 },
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+  {
+    id: 'cabelo-svc-009',
+    name: 'Chapinha',
+    description: 'Alisamento com chapinha',
+    price: 70.00,
+    durationMinutes: 60,
+    category: { id: 'escovas', name: 'Escovas', order: 4 },
+    isActive: true,
+    establishmentId: 'cabelo-001',
+  },
+]
